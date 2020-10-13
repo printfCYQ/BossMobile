@@ -1,0 +1,537 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, "Microsoft Yahei" sans-serif;
+  color: #7e8793;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* common */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.padded {
+  padding: 1rem;
+}
+
+.btn {
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+}
+
+.grey {
+  color: #9fa3b0;
+}
+
+/* home */
+
+.home-header {
+  background: url("../images/home-bg.png") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.home-header > img {
+  width: 67%;
+  margin: 2.3rem;
+}
+
+.home-header form {
+  background: #fff;
+  width: 92%;
+  margin: 0 auto;
+  line-height: 2.2rem;
+  border-radius: 2.2rem;
+}
+
+.home-header form input {
+  width: 75%;
+  border: none;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.home-header form input[type="text"]:focus {
+  outline: none;
+}
+
+.home-header form button {
+  font-size: 0.9rem;
+  color: #5bd4c7;
+  border: none;
+  background: none;
+}
+
+.home-header form button:focus {
+  outline: none;
+}
+
+.home-categories {
+  padding: 0 1rem;
+}
+
+.home-categories dt {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.home-categories dt img {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.home-categories dt div {
+  font-weight: 700;
+}
+
+.home-categories dd {
+  margin: 0;
+  margin: 1rem -0.4rem;
+}
+
+.home-categories dd .tag {
+  background: #f5f8f9;
+  color: #7e8793;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 2rem;
+  text-decoration: none;
+  margin: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+}
+.home-city-list {
+  padding: 0 1rem;
+  color: #404855;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.home-city-list .city-list p {
+  display: inline-block;
+  margin: 0;
+}
+
+.home-footer {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  padding: 1.5rem 0;
+}
+
+.home-footer p {
+  margin: 0.2rem 0;
+}
+
+/* list-page */
+
+.list-header {
+  padding: 0.8rem 1rem;
+}
+
+.list-header img {
+  height: 1.2rem;
+}
+
+.list-header form {
+  width: 100%;
+}
+
+.list-header form .inner {
+  width: 100%;
+  background: #f5f8f9;
+  margin: 0 1rem;
+  line-height: 1.7rem;
+  border-radius: 2rem;
+  padding: 0 1rem;
+}
+
+.list-header form .inner input {
+  width: 80%;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #7e8793;
+}
+
+.list-header form button {
+  border: none;
+  background: none;
+  font-size: 0.9rem;
+  color: #5bd4c7;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.filter {
+  padding: 0.5rem 1rem;
+  border: 1px solid #f5f8f9;
+}
+
+.filter dl,
+dd {
+  margin: 0;
+}
+
+.filter dt {
+  font-size: 0.8rem;
+}
+.filter dt.active {
+  color: #333;
+}
+.filter dt::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #999;
+  border-style: solid none none solid;
+  transform: rotate(225deg);
+  transform-origin: 2px 1px;
+  margin-left: 0.5rem;
+  transition: all 0.3s;
+}
+
+.filter .active dt::after {
+  transform: rotate(45deg);
+}
+
+.filter dd {
+  display: none;
+}
+
+.filter .active dd {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 90px;
+  left: 0;
+}
+
+.filter .active dd ul {
+  margin: 0;
+  background: #fff;
+  padding: 0;
+}
+
+.filter .active dd li {
+  line-height: 3.5rem;
+  text-indent: 1rem;
+  color: #aaa;
+  list-style: none;
+}
+
+.filter .active dd li.active {
+  background: #f5f8f9;
+  color: #333;
+}
+
+.job-list {
+  margin: 0;
+  padding: 0;
+}
+
+.job-item {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  color: #7e8793;
+  text-decoration: none;
+  border-bottom: 1px solid #f5f8f9;
+}
+
+.job-item > img {
+  height: 3rem;
+  border-radius: 0.3rem;
+}
+
+.job-item .text {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.job-item .title {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.job-item .salary {
+  color: #fc6c38;
+  font-size: 1.2rem;
+}
+.job-item .company {
+  color: #333;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+}
+
+.job-item .props {
+  font-size: 0.8rem;
+}
+
+.job-item .props span {
+  margin-right: 0.5rem;
+}
+
+/* detail */
+
+.top-bar img {
+  height: 1rem;
+}
+
+.top-bar form {
+  width: 40%;
+  border: 1px solid #5dd5c8;
+  border-radius: 2rem;
+  padding: 0 0.5rem;
+}
+
+.top-bar form input {
+  border: none;
+  background: none;
+  width: 80%;
+  line-height: 1.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.top-bar form button {
+  border: none;
+  background: url("../images/icons.png") no-repeat top center;
+  background-size: 100% auto;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.job-info {
+  background: #5bd4c7;
+  color: #fff;
+}
+
+.job-info .title {
+  font-size: 1.2rem;
+}
+
+.job-info .props {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.job-info .props .items i {
+  display: inline-block;
+  width: 0.1rem;
+  height: 0.8rem;
+  background: #fff;
+  margin: 0 0.5rem;
+}
+
+.job-info .tags span {
+  border: 1px solid #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+}
+
+.user-info {
+  background: #eefbf9;
+}
+
+.user-info > img {
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.user-info button {
+  background: #5dd5c8;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.user-info .name {
+  color: #333;
+}
+
+.user-info .name .like {
+  color: #fb7042;
+  font-size: 0.8rem;
+}
+
+.user-info .desc {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.user-info .info {
+  width: 40%;
+  margin: 0 1rem;
+}
+
+.job-detail h3 {
+  color: #333;
+  font-size: 1rem;
+  position: relative;
+}
+
+.job-detail h3::after {
+  content: "";
+  width: 1rem;
+  height: 2px;
+  display: inline-block;
+  background: #5dd5c8;
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+}
+
+.job-detail .text {
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+}
+
+.job-detail .tags {
+  margin-top: 1.5rem;
+}
+
+.job-detail .tags span {
+  font-size: 0.8rem;
+  color: #5dd5c8;
+  border: 1px solid #5dd5c8;
+  padding: 0.1rem 0.5rem;
+  border-radius: 1rem;
+  margin-right: 0rem 0.5rem 0.5rem 0;
+  display: inline-block;
+}
+
+.job-detail .text table {
+  border: 1px solid #ebecef;
+  padding: 0.7rem 0.3rem;
+  font-size: 0.75rem;
+}
+
+.job-detail .text table th {
+  font-weight: normal;
+  width: 6rem;
+  color: #9fa3b0;
+}
+
+.job-detail .text table td {
+  width: 8rem;
+}
+
+.company-info {
+  background: #eefbf9;
+}
+
+.company-info > img {
+  height: 3.5rem;
+  border-radius: 3.5rem;
+}
+
+.company-info .info {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.company-info .info .name {
+  color: #333;
+}
+
+.company-info .info .name button {
+  background: #5dd5c8;
+  color: #fff;
+  border: none;
+}
+
+.company-info .info .desc {
+  font-size: 0.8rem;
+  color: #414a60;
+}
+
+.company-info .info .tags {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  justify-content: flex-start;
+}
+
+.company-info .info .tags i {
+  display: inline-block;
+  width: 0.1rem;
+  height: 0.8rem;
+  background: #9fa3b0;
+  margin: 0 0.5rem;
+}
+
+.related-jobs h3 {
+  color: #767f96;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.related-jobs ul {
+  list-style: none;
+}
+
+.related-jobs ul li > a {
+  border: none;
+  border-top: 1px solid #ebecef;
+  padding-top: 0.8rem;
+  margin: 0;
+}
+
+.related-jobs .btn {
+  padding: 0.4rem 1.2rem;
+  margin-top: 0.3rem;
+  border: 1px #5dd5c8 solid;
+  color: #5dd5c8;
+  background: #fff;
+}
+
+.related-company h3 {
+  color: #767f96;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.related-company .tags a {
+  color: #7e8793;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin: 0 0.8rem 0.2rem 0;
+}
+
+.job-footer {
+  border-top: 1px solid #ebecef;
+  margin: 1rem;
+  padding: 1rem 0;
+  line-height: 1.5rem;
+}
+
+.breadcrumb-nav a {
+  color: #7e8793;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+.breadcrumb-nav i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #9fa3b0;
+  border-style: solid none none solid;
+  transform: rotate(135deg);
+}
